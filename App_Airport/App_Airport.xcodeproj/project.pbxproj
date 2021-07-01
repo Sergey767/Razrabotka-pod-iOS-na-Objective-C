@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		994FB55926851FCB008020DF /* PlaceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 994FB55826851FCB008020DF /* PlaceTableViewCell.m */; };
 		99CC199126823076006D7D01 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 99CC199026823076006D7D01 /* airports.json */; };
 		99CC19942682307F006D7D01 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 99CC19932682307F006D7D01 /* cities.json */; };
 		99CC199726823086006D7D01 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 99CC199626823085006D7D01 /* countries.json */; };
-		99CC199C268230F5006D7D01 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CC199B268230F5006D7D01 /* SecondViewController.m */; };
+		99CC199C268230F5006D7D01 /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CC199B268230F5006D7D01 /* PlaceViewController.m */; };
 		99CC19A226824FBC006D7D01 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CC19A126824FBC006D7D01 /* Country.m */; };
 		99CC19A726825242006D7D01 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CC19A626825242006D7D01 /* City.m */; };
 		99CDBA362682668300C924E2 /* Airport.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CDBA352682668300C924E2 /* Airport.m */; };
@@ -21,14 +22,18 @@
 		99E8C34126822A8D007A63EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99E8C34026822A8D007A63EB /* Assets.xcassets */; };
 		99E8C34426822A8D007A63EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99E8C34226822A8D007A63EB /* LaunchScreen.storyboard */; };
 		99E8C34726822A8D007A63EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E8C34626822A8D007A63EB /* main.m */; };
+		99FA7B8B268CBCC900BADD94 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FA7B8A268CBCC900BADD94 /* TableViewController.m */; };
+		99FA7B8F268CBD0500BADD94 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FA7B8E268CBD0500BADD94 /* TableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		99CC199026823076006D7D01 /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
-		99CC19932682307F006D7D01 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
-		99CC199626823085006D7D01 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
-		99CC199A268230F5006D7D01 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		99CC199B268230F5006D7D01 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		994FB55726851FCB008020DF /* PlaceTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceTableViewCell.h; sourceTree = "<group>"; };
+		994FB55826851FCB008020DF /* PlaceTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceTableViewCell.m; sourceTree = "<group>"; };
+		99CC199026823076006D7D01 /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = airports.json; path = ../airports.json; sourceTree = "<group>"; };
+		99CC19932682307F006D7D01 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cities.json; path = ../cities.json; sourceTree = "<group>"; };
+		99CC199626823085006D7D01 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = countries.json; path = ../countries.json; sourceTree = "<group>"; };
+		99CC199A268230F5006D7D01 /* PlaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
+		99CC199B268230F5006D7D01 /* PlaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
 		99CC19A026824FBC006D7D01 /* Country.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
 		99CC19A126824FBC006D7D01 /* Country.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
 		99CC19A526825242006D7D01 /* City.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
@@ -48,6 +53,10 @@
 		99E8C34326822A8D007A63EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99E8C34526822A8D007A63EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99E8C34626822A8D007A63EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		99FA7B89268CBCC900BADD94 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		99FA7B8A268CBCC900BADD94 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		99FA7B8D268CBD0500BADD94 /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		99FA7B8E268CBD0500BADD94 /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +85,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		99CDBA412685045900C924E2 /* DataInFile */ = {
+			isa = PBXGroup;
+			children = (
+				99CC199626823085006D7D01 /* countries.json */,
+				99CC19932682307F006D7D01 /* cities.json */,
+				99CC199026823076006D7D01 /* airports.json */,
+			);
+			path = DataInFile;
+			sourceTree = "<group>";
+		};
 		99E8C32826822A8C007A63EB = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +114,7 @@
 		99E8C33326822A8C007A63EB /* App_Airport */ = {
 			isa = PBXGroup;
 			children = (
+				99CDBA412685045900C924E2 /* DataInFile */,
 				99E8C33426822A8C007A63EB /* AppDelegate.h */,
 				99E8C33526822A8C007A63EB /* AppDelegate.m */,
 				99E8C33726822A8C007A63EB /* SceneDelegate.h */,
@@ -102,11 +122,14 @@
 				99CC199F26824F28006D7D01 /* Model */,
 				99E8C33A26822A8C007A63EB /* MainViewController.h */,
 				99E8C33B26822A8C007A63EB /* MainViewController.m */,
-				99CC199A268230F5006D7D01 /* SecondViewController.h */,
-				99CC199B268230F5006D7D01 /* SecondViewController.m */,
-				99CC199026823076006D7D01 /* airports.json */,
-				99CC19932682307F006D7D01 /* cities.json */,
-				99CC199626823085006D7D01 /* countries.json */,
+				99CC199A268230F5006D7D01 /* PlaceViewController.h */,
+				99CC199B268230F5006D7D01 /* PlaceViewController.m */,
+				994FB55726851FCB008020DF /* PlaceTableViewCell.h */,
+				994FB55826851FCB008020DF /* PlaceTableViewCell.m */,
+				99FA7B89268CBCC900BADD94 /* TableViewController.h */,
+				99FA7B8A268CBCC900BADD94 /* TableViewController.m */,
+				99FA7B8D268CBD0500BADD94 /* TableViewCell.h */,
+				99FA7B8E268CBD0500BADD94 /* TableViewCell.m */,
 				99E8C34026822A8D007A63EB /* Assets.xcassets */,
 				99E8C34226822A8D007A63EB /* LaunchScreen.storyboard */,
 				99E8C34526822A8D007A63EB /* Info.plist */,
@@ -186,13 +209,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99CC199C268230F5006D7D01 /* SecondViewController.m in Sources */,
+				99FA7B8B268CBCC900BADD94 /* TableViewController.m in Sources */,
+				99FA7B8F268CBD0500BADD94 /* TableViewCell.m in Sources */,
+				99CC199C268230F5006D7D01 /* PlaceViewController.m in Sources */,
 				99E8C33C26822A8C007A63EB /* MainViewController.m in Sources */,
 				99E8C33626822A8C007A63EB /* AppDelegate.m in Sources */,
 				99E8C34726822A8D007A63EB /* main.m in Sources */,
 				99CC19A226824FBC006D7D01 /* Country.m in Sources */,
 				99CDBA362682668300C924E2 /* Airport.m in Sources */,
 				99CC19A726825242006D7D01 /* City.m in Sources */,
+				994FB55926851FCB008020DF /* PlaceTableViewCell.m in Sources */,
 				99CDBA3A26826DB900C924E2 /* DataManager.m in Sources */,
 				99E8C33926822A8C007A63EB /* SceneDelegate.m in Sources */,
 			);
