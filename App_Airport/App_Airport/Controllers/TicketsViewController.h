@@ -7,6 +7,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum TicketType {
+    TicketTypeMapPrice,
+    TicketTypeFound
+} TicketType;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TicketsViewController : UITableViewController
