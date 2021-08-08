@@ -45,6 +45,17 @@
         _dateLabel = [[UILabel alloc] initWithFrame:self.bounds];
         _dateLabel.font = [UIFont systemFontOfSize:15.0 weight:UIFontWeightRegular];
         [self.contentView addSubview:_dateLabel];
+        
+        [UIView animateWithDuration:2
+                              delay:0
+                            options:UIViewAnimationOptionAutoreverse
+                         animations:^{
+            self.priceLabel.frame = CGRectMake(10.0, 10, self.contentView.frame.size.width - 110.0, 40.0);
+            [UIView animateWithDuration:2 delay:1 options:UIViewAnimationOptionRepeat animations:^{
+                self.airlineLogoView.alpha = 0;
+            } completion:nil];
+        }
+                         completion:nil];
     }
     return self;
 }
