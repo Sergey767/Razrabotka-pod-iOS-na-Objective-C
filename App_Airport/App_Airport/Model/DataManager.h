@@ -18,6 +18,12 @@ typedef enum DataSourceType {
     DataSourceTypeAirport
 } DataSourceType;
 
+typedef struct SearchRequest {
+    __unsafe_unretained NSString *origin;
+    __unsafe_unretained NSString *destination;
+    __unsafe_unretained NSString *returnDate;
+} SearchRequest;
+
 @interface DataManager : NSObject
 
 + (instancetype)sharedInstance;
