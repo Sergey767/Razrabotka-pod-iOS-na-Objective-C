@@ -96,8 +96,6 @@
 
 - (void)addToFavoriteMapPrice:(MapPrice *)mapPrice {
     FavoriteMapPrice *favoriteMapPrice = [NSEntityDescription insertNewObjectForEntityForName:entityNameMapPrice inManagedObjectContext:_managedObjectContext];
-    //favoriteMapPrice.destination = mapPrice.destination;
-    //favoriteMapPrice.origin = mapPrice.origin;
     favoriteMapPrice.departure = mapPrice.departure;
     favoriteMapPrice.returnDate = mapPrice.returnDate;
     favoriteMapPrice.numberOfChanges = mapPrice.numberOfChanges;

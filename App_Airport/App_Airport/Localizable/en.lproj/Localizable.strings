@@ -1,0 +1,47 @@
+/* 
+  Localizable.strings
+  App_Airport
+
+  Created by Сергей Горячев on 10.08.2021.
+  
+*/
+
+// TabBarController
+"search_tab" = "Search";
+"map_tab" = "Map Price";
+"favorites_tab" = "Favorites";
+
+// MainViewController
+"main_from" = "From";
+"main_to" = "To";
+"main_search" = "search";
+
+// FirstViewController
+"about_app_header" = "ABOUT APP";
+"tickets_header" = "AIR TICKETS";
+"map_price_header" = "MAP PRICE";
+"favorites_header" = "FAVORITES";
+"about_app_describe" = "Flight search application";
+"tickets_describe" = "Find the cheapest flights";
+"map_price_describe" = "View the price map";
+"favorites_describe" = "Save selected tickets to favorites";
+"next_button" = "NEXT";
+"done_button" = "DONE";
+
+// TicketsViewController
+"tickets_title" = "Tickets";
+"add_to_favorite" = "Add to favourites";
+"remove_from_favorite" = "Remove from favorites";
+"remind_me" = "Remind";
+"ticket_reminder" = "Ticket reminder";
+"notification_will_be_sent" = "Notification will be sent - %@";
+"success" = "Successfully";
+
+// Alerts
+"error" = "Error";
+"tickets_not_found" = "No tickets found for this direction";
+"close" = "Close";
+"not_set_place_arrival_or_departure" = "You must indicate the place of departure and place of arrival";
+"actions_with_tickets" = "Ticket Actions";
+"actions_with_tickets_describe" = "What should be done with the selected ticket?";
+"not_determine_current_city" = "Could not determine the current city!";

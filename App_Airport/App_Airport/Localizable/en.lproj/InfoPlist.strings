@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  App_Airport
+
+  Created by Сергей Горячев on 10.08.2021.
+  
+*/
+
+"CFBundleDisplayName" = "AIR TICKETS";
+"CFBundleName" = "AIR TICKETS";

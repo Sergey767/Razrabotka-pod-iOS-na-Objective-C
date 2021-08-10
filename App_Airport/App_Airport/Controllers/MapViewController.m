@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Карта цен";
+    self.title = NSLocalizedString(@"map_tab", "");
     
     _mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
     _mapView.showsUserLocation = YES;
@@ -116,8 +116,8 @@
                 TicketsViewController *ticketsViewController = [[TicketsViewController alloc] initWithMapPrices:prices];
                 [self.navigationController showViewController:ticketsViewController sender:self];
             } else {
-                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Увы!" message:@"По данному направлению билетов не найдено" preferredStyle:UIAlertControllerStyleAlert];
-                [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть" style:(UIAlertActionStyleDefault) handler:nil]];
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Увы!" message:NSLocalizedString(@"tickets_not_found", "") preferredStyle:UIAlertControllerStyleAlert];
+                [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"close", "") style:(UIAlertActionStyleDefault) handler:nil]];
                 [self presentViewController:alertController animated:YES completion:nil];
             }
     }];
