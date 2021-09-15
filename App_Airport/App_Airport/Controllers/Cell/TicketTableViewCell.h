@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
     @property (nonatomic, strong) FavoriteTicket *favoriteTicket;
     @property (nonatomic, strong) MapPrice *mapPrice;
     @property (nonatomic, strong) FavoriteMapPrice *favoriteMapPrice;
+    @property (nonatomic, strong) UIImageView *airlineNotificationLogoView;
 
 @end
 

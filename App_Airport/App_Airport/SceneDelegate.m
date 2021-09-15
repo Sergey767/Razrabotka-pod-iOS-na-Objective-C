@@ -9,6 +9,9 @@
 #import "MainViewController.h"
 #import "MapViewController.h"
 #import "TabBarViewController.h"
+#import "NotificationCenter.h"
+#import "TicketsViewController.h"
+#import "PlaceViewController.h"
 
 @interface SceneDelegate ()
 
@@ -27,8 +30,8 @@
     self.window.rootViewController = tabBarController;
     UIWindowScene *windowScene = (UIWindowScene *)scene;
     [self.window setWindowScene:windowScene];
+    [[NotificationCenter sharedInstance] registerService];
 }
-
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.

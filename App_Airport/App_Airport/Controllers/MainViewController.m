@@ -10,6 +10,8 @@
 #import "TicketsViewController.h"
 #import "DataManager.h"
 #import "APIManager.h"
+#import "ProgressView.h"
+#import "TutorialPageViewController.h"
 
 @interface MainViewController ()
 @property (nonatomic, strong) UIView *placeContainerView;
@@ -21,6 +23,12 @@
 @end
 
 @implementation MainViewController
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self presentTutorialPageViewControllerIfNeeded];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -70,17 +78,34 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataLoadedSuccessfully) name:kDataManagerLoadDataDidComplete object:nil];
 }
 
+- (void)presentTutorialPageViewControllerIfNeeded {
+    BOOL isTutorialStart = [[NSUserDefaults standardUserDefaults] boolForKey:@"first_start"];
+    if (!isTutorialStart) {
+        TutorialPageViewController *tutorialPageViewController = [[TutorialPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+        [self presentViewController:tutorialPageViewController animated:YES completion:nil];
+    }
+}
+
 - (void)searchButtonDidTap:(UIButton *)sender {
-    [[APIManager sharedInstance] ticketsWithRequest:_searchRequest withCompletion:^(NSArray *tickets) {
-            if (tickets.count > 0) {
-                TicketsViewController *ticketsViewController = [[TicketsViewController alloc] initWithTickets:tickets];
-                [self.navigationController showViewController:ticketsViewController sender:self];
-            } else {
-                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Увы!" message:@"По данному направлению билетов не найдено" preferredStyle:UIAlertControllerStyleAlert];
-                [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть" style:(UIAlertActionStyleDefault) handler:nil]];
-                [self presentViewController:alertController animated:YES completion:nil];
-            }
-    }];
+    if (_searchRequest.origin && _searchRequest.destination) {
+        [[ProgressView sharedInstance] show:^{
+                    [[APIManager sharedInstance] ticketsWithRequest:self->_searchRequest withCompletion:^(NSArray *tickets) {
+                        [[ProgressView sharedInstance] dismiss:^{
+                            if (tickets.count > 0) {
+                                TicketsViewController *ticketsViewController = [[TicketsViewController alloc] initWithTickets:tickets];
+                                [self.navigationController showViewController:ticketsViewController sender:self];
+                            } else {
+                                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Увы!" message:@"По данному направлению билетов не найдено" preferredStyle:UIAlertControllerStyleAlert];
+                                [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть" style:(UIAlertActionStyleDefault) handler:nil]];
+                                [self presentViewController:alertController animated:YES completion:nil];
+                            }
+                        }];
+                    }];
+        }];
+    } else {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Ошибка" message:@"Необходимо указать место отправления и место прибытия" preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть" style:(UIAlertActionStyleDefault) handler:nil]];
+    }
 }
 
 - (void)dataLoadedSuccessfully {
