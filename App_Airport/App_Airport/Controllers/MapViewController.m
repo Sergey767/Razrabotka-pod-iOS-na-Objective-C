@@ -12,6 +12,7 @@
 #import "DataManager.h"
 #import "MapPrice.h"
 #import <CoreLocation/CoreLocation.h>
+#import "TicketsViewController.h"
 
 @interface MapViewController ()
 
@@ -31,6 +32,7 @@
     
     _mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
     _mapView.showsUserLocation = YES;
+    [_mapView setDelegate:self];
     [self.view addSubview:_mapView];
     
     [[DataManager sharedInstance] loadData];

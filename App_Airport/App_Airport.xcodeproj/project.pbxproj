@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9904DE6126A46416001C8662 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9904DE6026A46416001C8662 /* TabBarViewController.m */; };
 		9943C7F926923CB500A7AC63 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9943C7F826923CB500A7AC63 /* APIManager.m */; };
 		9943C7FD2692562F00A7AC63 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9943C7FC2692562F00A7AC63 /* Ticket.m */; };
 		9948C868269F52DD00A9F84A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9948C867269F52DD00A9F84A /* MapViewController.m */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9904DE5F26A46416001C8662 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		9904DE6026A46416001C8662 /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		9943C7F726923CB500A7AC63 /* APIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		9943C7F826923CB500A7AC63 /* APIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		9943C7FB2692562F00A7AC63 /* Ticket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 		9943C7F226922E2800A7AC63 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9943C7F3269238DF00A7AC63 /* Cell */,
 				99E8C33A26822A8C007A63EB /* MainViewController.h */,
 				99E8C33B26822A8C007A63EB /* MainViewController.m */,
 				99CC199A268230F5006D7D01 /* PlaceViewController.h */,
@@ -96,6 +100,8 @@
 				99FA7B8A268CBCC900BADD94 /* TicketsViewController.m */,
 				9948C866269F52DD00A9F84A /* MapViewController.h */,
 				9948C867269F52DD00A9F84A /* MapViewController.m */,
+				9904DE5F26A46416001C8662 /* TabBarViewController.h */,
+				9904DE6026A46416001C8662 /* TabBarViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -144,7 +150,6 @@
 				99CC19A626825242006D7D01 /* City.m */,
 				99CDBA342682668300C924E2 /* Airport.h */,
 				99CDBA352682668300C924E2 /* Airport.m */,
-				9943C7F3269238DF00A7AC63 /* Cell */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,11 +183,11 @@
 		99E8C33326822A8C007A63EB /* App_Airport */ = {
 			isa = PBXGroup;
 			children = (
-				99CDBA412685045900C924E2 /* DataInFile */,
 				99E8C33426822A8C007A63EB /* AppDelegate.h */,
 				99E8C33526822A8C007A63EB /* AppDelegate.m */,
 				99E8C33726822A8C007A63EB /* SceneDelegate.h */,
 				99E8C33826822A8C007A63EB /* SceneDelegate.m */,
+				99CDBA412685045900C924E2 /* DataInFile */,
 				9943C7F5269239CE00A7AC63 /* Services */,
 				9943C7F4269239B500A7AC63 /* Data */,
 				99CC199F26824F28006D7D01 /* Model */,
@@ -282,6 +287,7 @@
 				994FB55926851FCB008020DF /* PlaceTableViewCell.m in Sources */,
 				99CDBA3A26826DB900C924E2 /* DataManager.m in Sources */,
 				9948C868269F52DD00A9F84A /* MapViewController.m in Sources */,
+				9904DE6126A46416001C8662 /* TabBarViewController.m in Sources */,
 				99E8C33926822A8C007A63EB /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2753KP9756;
 				INFOPLIST_FILE = App_Airport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -435,6 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2753KP9756;
 				INFOPLIST_FILE = App_Airport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

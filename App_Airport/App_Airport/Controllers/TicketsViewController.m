@@ -9,8 +9,10 @@
 #import "TicketTableViewCell.h"
 
 #define TicketCellReuseIdentifier @"TicketCellIdentifier"
+#define MapPriceCellReuseIdentifier @"MapPriceCellIdentifier"
 
 @interface TicketsViewController ()
+    @property (nonatomic) TicketType ticketType;
     @property (nonatomic, strong) NSArray *tickets;
 @end
 
@@ -41,7 +43,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TicketTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TicketCellReuseIdentifier forIndexPath:indexPath];
     cell.ticket = [_tickets objectAtIndex:indexPath.row];
-    
+        
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
