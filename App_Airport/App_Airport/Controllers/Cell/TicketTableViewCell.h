@@ -7,12 +7,18 @@
 
 #import <UIKit/UIKit.h>
 #import "Ticket.h"
+#import "MapPrice.h"
+#import "FavoriteTicket+CoreDataClass.h"
+#import "FavoriteMapPrice+CoreDataClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TicketTableViewCell : UITableViewCell
 
     @property (nonatomic, strong) Ticket *ticket;
+    @property (nonatomic, strong) FavoriteTicket *favoriteTicket;
+    @property (nonatomic, strong) MapPrice *mapPrice;
+    @property (nonatomic, strong) FavoriteMapPrice *favoriteMapPrice;
 
 @end
 

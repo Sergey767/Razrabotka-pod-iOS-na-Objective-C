@@ -15,7 +15,10 @@ typedef enum TicketType {
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TicketsViewController : UITableViewController
+- (instancetype)initWithType:(TicketType)type;
 - (instancetype)initWithTickets:(NSArray *)tickets;
+- (instancetype)initWithMapPrices:(NSArray *)prices;
+- (instancetype)initFavoriteTicketsController;
 @end
 
 NS_ASSUME_NONNULL_END

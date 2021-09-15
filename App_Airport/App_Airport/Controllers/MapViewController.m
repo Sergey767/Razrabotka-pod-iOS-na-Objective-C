@@ -12,6 +12,7 @@
 #import "DataManager.h"
 #import "MapPrice.h"
 #import <CoreLocation/CoreLocation.h>
+#import "CoreDataHelper.h"
 #import "TicketsViewController.h"
 
 @interface MapViewController ()
@@ -94,6 +95,32 @@
             [self->_mapView addAnnotation: annotation];
         });
     }
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    static NSString *identifier = @"MarkerIdentifier";
+    MKMarkerAnnotationView *annotationView = (MKMarkerAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+    if (!annotationView) {
+        annotationView = [[MKMarkerAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+        annotationView.canShowCallout = YES;
+        annotationView.calloutOffset = CGPointMake(-5.0, 5.0);
+        annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    }
+    annotationView.annotation = annotation;
+    return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    [[APIManager sharedInstance] mapPricesFor:_origin withCompletion:^(NSArray *prices) {
+            if (prices.count > 0) {
+                TicketsViewController *ticketsViewController = [[TicketsViewController alloc] initWithMapPrices:prices];
+                [self.navigationController showViewController:ticketsViewController sender:self];
+            } else {
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Увы!" message:@"По данному направлению билетов не найдено" preferredStyle:UIAlertControllerStyleAlert];
+                [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть" style:(UIAlertActionStyleDefault) handler:nil]];
+                [self presentViewController:alertController animated:YES completion:nil];
+            }
+    }];
 }
 
 @end
